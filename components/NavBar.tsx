@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 
@@ -142,6 +143,12 @@ export default function NavBar() {
                 )}
               </div>
             ))}
+          </div>
+
+          {/* Desktop image icons */}
+          <div className="hidden lg:flex items-center space-x-2 mr-3">
+            <Image src="/download.jpg" alt="Download" width={28} height={28} className="object-contain rounded" />
+            <Image src="/download_1.jpg" alt="Download 1" width={28} height={28} className="object-contain rounded" />
           </div>
 
           {/* Mobile Menu Button */}
