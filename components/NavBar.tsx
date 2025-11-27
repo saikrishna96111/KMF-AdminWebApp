@@ -36,9 +36,12 @@ export default function NavBar() {
     {
       label: "Finance & Billing",
       links: [
-        { name: "Accounting", path: "/finance-and-billing/accounting" },
-        { name: "Billing", path: "/finance-and-billing/billing" },
-        { name: "Receivables", path: "/finance-and-billing/receivables" },
+        { name: "Sales Accounting", path: "/finance-and-billing/sales-accounting" },
+        { name: "Agent Billing", path: "/finance-and-billing/agent-billing" },
+        { name: "Transport Billing (DTC)", path: "/finance-and-billing/transport-billing" },
+        { name: "Employee Subsidy", path: "/finance-and-billing/employee-subsidy" },
+        { name: "Outstanding Receivables", path: "/finance-and-billing/outstanding-receivables" },
+        { name: "Commissions & Incentives", path: "/finance-and-billing/commissions" },
       ],
     },
     { label: "Reports & Analytics", links: [{ name: "Reports", path: "/reports-and-analytics" }] },
