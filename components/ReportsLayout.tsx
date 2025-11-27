@@ -39,7 +39,7 @@ export default function ReportsLayout({ selected, onSelect, children }: Props) {
         </div>
         {React.Children.map(children, (child) => {
           if (!React.isValidElement(child)) return child;
-          return React.cloneElement(child, { filters });
+          return React.cloneElement(child as React.ReactElement<any>, { ...(child.props as any), filters } as any);
         })}
       </div>
     </div>
