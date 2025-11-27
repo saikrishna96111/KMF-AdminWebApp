@@ -7,24 +7,24 @@ import SalesOpsLayout from "@/components/SalesOpsLayout";
 import SalesOpsSection from "@/components/SalesOpsSection";
 import salesData from "@/lib/salesData";
 
-export default function ProcurementPage() {
+export default function SalesReturnsPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
   if (loading) return <p>Loading...</p>;
   if (!user) return <p>You must log in first.</p>;
 
   const columns = [
-    { key: 'procurementId', label: 'Procurement ID' },
-    { key: 'supplierName', label: 'Supplier Name' },
-    { key: 'product', label: 'Product/Item' },
-    { key: 'qtySupplied', label: 'Qty Supplied' },
+    { key: 'returnId', label: 'Return ID' },
+    { key: 'saleRef', label: 'Sale Ref' },
+    { key: 'product', label: 'Product' },
+    { key: 'returnedQty', label: 'Returned Qty' },
+    { key: 'reason', label: 'Reason' },
     { key: 'date', label: 'Date' },
-    { key: 'costCenter', label: 'Cost Center' },
   ];
 
   return (
-    <SalesOpsLayout selected="procurement" onSelect={(id) => router.push(`/sales-and-operations/${id}`)}>
-      <SalesOpsSection title="Procurement & Input Supply" columns={columns} data={salesData.procurements as any} />
+    <SalesOpsLayout selected="returns" onSelect={(id) => router.push(`/sales-and-operations/${id}`)}>
+      <SalesOpsSection title="Sales Return / Adjustment" columns={columns} data={salesData.salesReturns as any} />
     </SalesOpsLayout>
   );
 }
