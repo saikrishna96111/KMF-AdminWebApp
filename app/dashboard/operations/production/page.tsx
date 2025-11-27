@@ -9,15 +9,10 @@ export default function ProductionPageOps() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace("/sales-and-operations/production");
-  }, [router]);
+    if (user) router.replace("/sales-and-operations/production");
+  }, [router, user]);
   if (loading) return <p>Loading...</p>;
   if (!user) return <p>You must log in first.</p>;
 
-  return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold">Production &amp; Quality</h1>
-      <p className="mt-4">Placeholder page for Production & Quality (Operations).</p>
-    </div>
-  );
+  return null;
 }

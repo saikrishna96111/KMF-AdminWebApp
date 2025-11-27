@@ -8,15 +8,10 @@ export default function MoreHelpPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
   useEffect(() => {
-    router.replace('/administration/support');
-  }, [router]);
+    if (user) router.replace('/administration/support');
+  }, [router, user]);
   if (loading) return <p>Loading...</p>;
   if (!user) return <p>You must log in first.</p>;
 
-  return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold">Help</h1>
-      <p className="mt-4">Placeholder page for help under More.</p>
-    </div>
-  );
+  return null;
 }
