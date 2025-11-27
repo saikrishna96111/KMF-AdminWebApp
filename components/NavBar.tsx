@@ -44,7 +44,19 @@ export default function NavBar() {
         { name: "Commissions & Incentives", path: "/finance-and-billing/commissions" },
       ],
     },
-    { label: "Reports & Analytics", links: [{ name: "Reports", path: "/reports-and-analytics" }] },
+    {
+      label: "Reports & Analytics",
+      links: [
+        { name: "Overview", path: "/reports-and-analytics" },
+        { name: "Master Reports", path: "/reports-and-analytics/master" },
+        { name: "Sales & Distribution", path: "/reports-and-analytics/sales" },
+        { name: "Accounting", path: "/reports-and-analytics/accounting" },
+        { name: "Operations", path: "/reports-and-analytics/operations" },
+        { name: "Inventory & Production", path: "/reports-and-analytics/inventory" },
+        { name: "Credit & Outstanding", path: "/reports-and-analytics/credit" },
+        { name: "Trend & Performance", path: "/reports-and-analytics/trend" },
+      ],
+    },
     {
       label: "Administration",
       links: [
